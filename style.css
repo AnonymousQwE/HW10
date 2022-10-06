@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.pinguin-container {
+  position: relative;
+  text-align: center;
+}
+.text {
+  font-size: 25px;
+}
+.hidden-text {
+    width: 500px;
+  position: absolute;
+  top: -80px;
+  left: -100px;
+  font-size: 0px;
+  transition: 2s;
+  color: #000;
+}
+.pinguin {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  border-radius: 50px;
+  margin-top: 100px;
+
+  background: #000;
+}
+.pinguin:hover .pinguin-eye-left,
+.pinguin:hover .pinguin-eye-right {
+  background: red;
+  width: 60px;
+  height: 60px;
+}
+.pinguin:hover .hidden-text {
+  font-size: 50px;
+  color: red;
+}
+.pinguin:hover .pinguin-paw-left {
+  transform: rotate(130deg);
+  height: 100px;
+}
+.pinguin:hover .pinguin-paw-right {
+  transform: rotate(-130deg);
+  height: 100px;
+}
+.pinguin::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  left: 25px;
+  top: 80px;
+  border-radius: 30px;
+}
+.pinguin-eye-left {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 15px;
+  left: 20px;
+  border-radius: 50px;
+  transition: 1s;
+
+  background: white;
+}
+.pinguin-eye-left::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 10px;
+  border-radius: 20px;
+
+  background: #000;
+}
+.pinguin-eye-right {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  border-radius: 50px;
+  transition: 1s;
+
+  background: white;
+}
+.pinguin-eye-right::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 10px;
+  border-radius: 20px;
+
+  background: #000;
+}
+.pinguin-legs-left {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  bottom: -20px;
+  left: 30px;
+  border-radius: 20px;
+
+  background: orange;
+}
+.pinguin-legs-right {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  bottom: -20px;
+  right: 30px;
+  border-radius: 20px;
+
+  background: orange;
+}
+.pinguin-paw-left {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  top: 70px;
+  left: -15px;
+  border-radius: 20px;
+  transform: rotate(30deg);
+  transition: 1s;
+
+  background: #000;
+}
+.pinguin-paw-right {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  top: 70px;
+  right: -15px;
+  border-radius: 20px;
+  transform: rotate(-30deg);
+  transition: 1s;
+
+  background: #000;
+}
